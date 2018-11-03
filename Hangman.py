@@ -18,7 +18,6 @@ def sprint(str, ending='\n'):
         stdout.flush()
     print(end=ending)
 
-
 # Генерация нового слова с сайта
 def new_word():
     url = "http://free-generator.ru/generator.php?action=word&type=1"
@@ -30,14 +29,12 @@ def new_word():
     pattern = r'word":"\D+",'
     return search(pattern, mystr)[0][7:-2]
 
-
 # Проверка повтора символа
 def is_repeated(char):
     if char in all_chars:
         return True
     else:
         return False
-
 
 # Вывод опробованных букв
 def print_used_chars():
@@ -55,7 +52,6 @@ def print_used_chars():
     else:
         print()
 
-
 # Вывод отгадываемого слова в зашифрованном виде
 def print_word():
     print('Наше слово: ', end="")
@@ -66,7 +62,6 @@ def print_word():
             print('-', end="")
     print()
 
-
 # Вывод всей информации в одной команде
 def info():
     print()
@@ -74,7 +69,6 @@ def info():
     print_used_chars()
     print('Попыток осталось: ' + str(attempts))
     print()
-
 
 # Очистка экрана консоли
 system('cls')
